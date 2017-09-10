@@ -1,0 +1,39 @@
+#*****TOWER OF HANOI*******
+
+
+def hanoi(n, source, spare, target):
+    '''
+    objective: to solve the problem of tower of hanoi for n user input disks
+    Input Parameters:
+        n: no of disks
+        source: the source pole holding all disks
+        spare: spare pole used to hold temporary disks 
+        target: target pole holding final poles
+    '''
+    #Approach: recursively calling the function hanoi()
+    
+    assert n>0
+    if n == 1:
+        print("Move disk from ", source, "to ", target)
+    else:
+        hanoi(n-1, source, target, spare)
+        print("Move disk from ", source, "to ", target)
+        hanoi(n-1, spare, source, target)
+        
+
+def main():
+    '''
+    objective: to solve the problem of tower of hanoi for n user input disks
+    input parameters:
+        n: no of disks
+    '''
+    
+    no = int(input("Enter number of disks: "))
+    source = 1
+    spare = 2
+    target = 3
+    hanoi(no, source, spare, target)
+
+
+if __name__ == '__main__':
+    main()
