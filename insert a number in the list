@@ -1,0 +1,30 @@
+#code to append a number in the sorted list recursively
+
+
+def appendlist(number,lst,position=0):
+    '''
+    objective: to append a value in sorted list
+    input parameter:
+          lst: original sorted list
+          number: the number which is inserted in the list
+          position: to traverse the list
+    output:  modified list
+    '''
+    #approach: recursive call of the function
+    
+    if(number< lst[len(lst)-1]):
+        if(number < lst[position]):
+          lst.insert(position,number)
+          return lst
+        else: 
+         return appendlist(number,lst,position+1)
+    else:
+        lst.insert(len(lst),number)
+     
+    
+
+lst = [11,18,28,35,56]
+print('original list: ',lst)
+number = int(input('enter the number you want to append in the list: '))
+appendlist(number,lst)
+print('modified list: ',lst)
