@@ -1,0 +1,42 @@
+#---------SORTING OF LIST----------
+def sort_insert(mylist,number,position=0):
+    '''
+    Objective: to append a value in sorted list
+    Input parameter:
+          mylist: list need to sorted
+          number: number to be stored in the list
+          position: to traverse the list
+    '''
+    #approach: recursive call of the function sort_insert
+    
+    if position < (len(mylist)):
+        if (number < mylist[position]):
+            mylist.insert(position,number)
+            
+        else:sort_insert(mylist,number,position+1)
+    else:
+        mylist.insert(len(mylist),number)
+        
+def main():
+    '''
+    Objective: to sort the user entered list
+    Input:
+         number_of_elements: user defined length of the list
+          mylist: A list which store the user entered elements
+          element: A number to be stored in the list
+    Output:  sorted list
+    '''
+    #approach: the element is inserted in the list in a sorted manner
+
+    number_of_element=int(input('How many elements you want to enter in the list: '))
+    mylist=[]
+
+    for i in range(number_of_element):
+        element = int(input('Enter elements in the list: '))
+        sort_insert(mylist,element)
+    print('Sorted list: ',mylist)
+
+
+if __name__ == '__main__':
+    main()
+    
