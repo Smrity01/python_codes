@@ -20,11 +20,11 @@ def sorting(mylist,track=0):
     if (track < last_index):
         index = min_index(mylist,min_el_index,last_index,position)
         min_el = mylist[index]
-        mylist[index] = mylist[track]
+        mylist[index]=mylist[track]
         mylist[track] = min_el
         sorting(mylist,track+1)
         
-    else: print('sorted list: ',mylist)
+    else: return
         
 
 
@@ -48,16 +48,13 @@ def min_index(mylist,min_el_index,last_index,position):
     if (position < last_index):
         if (mylist[min_el_index] > mylist[position+1]):
             min_el_index = position+1
-            return min_index(mylist,min_el_index,last_index,position+1)
+        return min_index(mylist,min_el_index,last_index,position+1)
         
-        else:return min_index(mylist,min_el_index,last_index,position+1)
-        
-    elif(mylist[min_el_index] > mylist[last_index]):
-        min_el_index = last_index
-        return min_el_index
+   
     else: return min_el_index
         
      
-mylist=[15,31,31,48,-2]
+mylist=[15,31,11,48,-2]
 print('unsorted_list:',mylist)
 sorting(mylist)
+print('Sortedlist: ',mylist)
