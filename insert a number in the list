@@ -8,7 +8,7 @@ def appendlist(number,lst,position=0):
           lst: original sorted list
           number: the number which is inserted in the list
           position: to traverse the list
-    output:  modified list
+    return value:  modified list
     '''
     #approach: recursive call of the function
     
