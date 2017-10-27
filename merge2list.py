@@ -8,7 +8,7 @@ def merge(mylist,mylist2,finallist):
           finallist: The new merged list
     return value: final merged list
     '''
-    #Approach: 
+    #Approach: inserting the smallest element of the two list at position 'pos' in the new list
     pos = 0
     
     if mylist != [] and mylist2 != []:
