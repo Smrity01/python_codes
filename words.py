@@ -7,7 +7,6 @@ def more_frequent(words,finallist):
     Return value    : Final list of words with there count
          
     '''
-    word_count = []                   # Variable to store the count of each unique word
     if(len(words) > 0):
         my_word = words[0]            # Variable for storing unique word
         count = 0                     # Variable for storing count of word
