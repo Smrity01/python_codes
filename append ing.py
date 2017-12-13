@@ -5,7 +5,7 @@ def check(string):
     return string
 
 def append(string):
-    if string[3:] == 'ing':
+    if string[len(string)-3:] == 'ing':
         string = string + 'ly'
         return string
     else:
