@@ -37,7 +37,6 @@ def min_index(mylist,min_el_index,last_index,position=0):
     elif (mylist[min_el_index] > mylist[last_index]):
         min_el_index = last_index
         return min_el_index
-    #elif (mylist[min_el_index] == mylist[last_index]):
         
     else: return min_el_index
 
