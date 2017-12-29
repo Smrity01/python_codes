@@ -6,9 +6,8 @@ def rotate(mylist):
     Return Value    : none
     '''
     mylist = mylist[1:] + mylist[:1]
-    '''
-    using inbuilt functions: mylist.append(mylist.pop(0))
-    '''
+    #using inbuilt functions: mylist.append(mylist.pop(0))
+    return mylist
 def main():
     '''
     Objective       : To call the Rotate function
@@ -17,7 +16,7 @@ def main():
     '''
     mylist = [3,4,5,6,2,7,8,6]
     print('List before rotation: ',mylist)
-    rotate(mylist)
+    mylist = rotate(mylist)
     print('List after rotation',mylist)
 
 if (__name__ == '__main__'):
