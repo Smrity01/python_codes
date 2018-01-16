@@ -13,6 +13,6 @@ def check_prime(number):
 num = int(input('Enter a number: '))
 print("****USING FERMAT'S LITTLE THEOREM******")
 if (check_prime(num) == True):
-    print('Its is a prime...')
+    print('Its is probably a prime...')
 else: print('Its is NOT a prime...')
     
