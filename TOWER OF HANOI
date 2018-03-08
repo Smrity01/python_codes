@@ -6,7 +6,7 @@ def hanoi(n, source, spare, target):
     objective: to solve the problem of tower of hanoi for n user input disks
     Input Parameters:
         n: no of disks
-        source: the source pole holding all disks
+        source: the sourasdbhase pole holding all disks
         spare: spare pole used to hold temporary disks 
         target: target pole holding final poles
     '''
